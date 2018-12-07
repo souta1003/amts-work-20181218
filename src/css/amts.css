@@ -1,0 +1,24 @@
+h1,
+h2 {
+  font-weight: lighter;
+  margin: 0;
+}
+
+#amts-app {
+  width: 70%;
+  margin: 0 auto;
+}
+
+#amts-io {
+  padding: 10px;
+}
+
+#amts-out {
+  display: inline-block;
+}
+
+#amts-spec {
+  background-color: #eee;
+  border: solid 1px #ccc;
+  padding: 10px;
+}

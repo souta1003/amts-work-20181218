@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset=" utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="css/amts.css">
+  <title>FizzBuzz問題</title>
+</head>
+
+<body>
+  <div id="amts-app">
+    <h1 id="amts-title">FizzBuzz問題</h1>
+    <div id="amts-io">
+      <input id="amts-in" placeholder="半角で数値を入力してね" maxlength="15">
+      <input type="button" value="→" id="amts-calc">
+      <div id="amts-out"></div>
+    </div>
+    <div id="amts-spec">
+      <h2 id="amts-spec-title">仕様</h2>
+      <ul>
+        <li>入力値が3の倍数ならば、「Fizz」を出力します。</li>
+        <li>入力値が5の倍数ならば、「Buzz」を出力します。</li>
+        <li>入力値が3の倍数かつ5の倍数ならば、「FizzBuzz」を出力します。</li>
+        <li>入力値が上記以外の数値（小数含む）ならば、入力した数値をそのまま出力します。</li>
+        <li>入力値が数値以外（文字列、記号、全角の数値など）、または未入力ならば、「NG」を出力します。</li>
+      </ul>
+    </div>
+  </div>
+  <script>
+    function fizzbuzz(num) {
+      //if (num === null || num === undefined || num === '') {
+      if (num === null || num === undefined) {
+        return 'NG';
+      }
+
+      num = Number(num);
+      if (!isFinite(num)) {
+        return 'NG';
+      }
+
+      if (num === 0) {
+        return 0;
+      }
+
+      if (num % 3 === 0 && num % 5 === 0) {
+        return 'FizzBuzz';
+      }
+
+      if (num % 3 === 0) {
+        //return 'Fizz';
+        return 'Hoge';
+      }
+
+      //if (num % 5 === 0) {
+      if (num % 10 === 0) {
+        return 'Buzz';
+      }
+
+      return num;
+    }
+  </script>
+  <script src="js/init.js"></script>
+  <script src="js/test.js"></script>
+</body>
+
+</html>
